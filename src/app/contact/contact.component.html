@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">Contacts</div>
+        <div class="card-body">
+          <h5 class="card-title">Laissez un message</h5>
+          
+          <form (submit)="submit()">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Adresse email" aria-label="Adresse email"
+                  aria-describedby="email" />
+                <span class="input-group-text" id="email">rpch@gmail.com</span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">Message</span>
+                <textarea class="form-control" style="height: 50px" aria-label="message"></textarea>
+              </div>
+              <div class="input-group mt-3">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+              
+          </form>
+        </div>
+        <div class="card-footer text-muted">
+        <p><i class="fab fa-whatsapp-square"></i> +33 6 37 08 48 76</p>
+        <p><i class="fas fa-at"></i> RPCH</p>
+        </div>
+      </div>
+    </div>
