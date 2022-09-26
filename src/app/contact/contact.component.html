@@ -1,28 +1,76 @@
-<div class="container">
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 offset-md-3">
+      <h6 class="bg-light p-2 border-top border-bottom">Contacts</h6>
+
+      <ul class="list-group list-group-light mb-4">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="../../assets/pdg.jpg" alt="" style="width: 45px; height: 45px"
+              class="rounded-circle" />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">Ruben Pedro CHILUEMBA</p>
+              <p class="text-muted mb-0">pdg@rpch-consulting.fr</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
+              style="width: 45px; height: 45px" />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">Van beni</p>
+              <p class="text-muted mb-0">da@rpch-consulting.fr</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="https://mdbootstrap.com/img/new/avatars/7.jpg" class="rounded-circle" alt=""
+              style="width: 45px; height: 45px" />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">Victoire LELO</p>
+              <p class="text-muted mb-0">dg@rpch-consulting.fr</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="container mt-5">
     <div class="card text-center">
         <div class="card-header">Contacts</div>
         <div class="card-body">
           <h5 class="card-title">Laissez un message</h5>
-          
-          <form (submit)="submit()">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Adresse email" aria-label="Adresse email"
+                <input type="text" ngModel required name="adresse" class="form-control" placeholder="Adresse email ou numéro de telephone" aria-label="Adresse email"
                   aria-describedby="email" />
-                <span class="input-group-text" id="email">rpch@gmail.com</span>
               </div>
               <div class="input-group">
                 <span class="input-group-text">Message</span>
-                <textarea class="form-control" style="height: 50px" aria-label="message"></textarea>
+                <textarea ngModel required name="message" class="form-control" style="height: 100px" aria-label="message"></textarea>
               </div>
               <div class="input-group mt-3">
                 <button type="submit" class="btn btn-primary">Envoyer</button>
               </div>
-              
           </form>
         </div>
         <div class="card-footer text-muted">
-        <p><i class="fab fa-whatsapp-square"></i> +33 6 37 08 48 76</p>
-        <p><i class="fas fa-at"></i> RPCH</p>
         </div>
       </div>
     </div>
+
+    <div class="card w-75 container mt-5 text-white bg-success" *ngIf="notify">
+      <div class="card-body">
+        <h5 class="card-title">Notification</h5>
+        <p class="card-text">Votre message a bien été envoyé!</p>
+        <a routerLink="/" class="btn btn-success">Acceuil</a>
+      </div>
+    </div>
+    -->

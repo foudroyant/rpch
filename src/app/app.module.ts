@@ -25,12 +25,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { FooterComponent } from './footer/footer.component';
+import { ErrorComponent } from './error/error.component';
+import { NewsComponent } from './news/news.component';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent,
+    ConnexionComponent,
+    FooterComponent,
+    ErrorComponent,
+    NewsComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,

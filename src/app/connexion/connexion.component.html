@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="card col-md-6 offset-md-3 col-sm-12">
+            <form class="row card-body" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                <h5 class="card-title">Connectez-vous</h5>
+                <div class="mb-3">
+                    <mdb-form-control>
+                        <input mdbInput ngModel required type="text" id="username" name="username" class="form-control" />
+                        <label mdbLabel class="form-label" for="username">Votre username</label>
+                      </mdb-form-control>
+                </div>
+                <div class="">
+                    <mdb-form-control>
+                        <input mdbInput type="password" id="psw" ngModel required name="psw" class="form-control" />
+                        <label mdbLabel class="form-label" for="psw">Votre mot de passe</label>
+                      </mdb-form-control>
+                </div>
+                    <button type="submit" class="btn btn-primary mt-2">Se connecter</button>
+            </form>
+        </div>
+        <div class="card col-md-6 offset-md-3 col-sm-12 text-white bg-danger" *ngIf="erreur">
+            <div class="card-body">
+              <h5 class="card-title">Notification</h5>
+              <p class="card-text">Erreur de connexion, veuillez contacter l'administrateur.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>

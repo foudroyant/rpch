@@ -7,11 +7,14 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  notify=false
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submit(){}
+  onSubmit(f:NgForm){
+    console.log(f.value)
+  }
 
 }

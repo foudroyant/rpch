@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid justify-content-between">
+      <ul class="navbar-nav d-flex flex-row">
+        <!-- Icons -->
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" (click)="panel='home'">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" (click)="panel='messages'">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item me-3 me-lg-1">
+          <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+            <img
+              src="../../assets/visiteur.png"
+              class="rounded-circle"
+              height="22"
+              alt=""
+              loading="lazy"
+            />
+            <strong class="d-none d-sm-block ms-1">Username</strong>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link btn btn-danger" (click)="off()">
+                <i class="fas fa-power-off"></i>
+            </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="panel">
+
+    <div class="row" *ngSwitchCase="'home'">
+
+    </div>
+
+    <div class="row mt-5" *ngSwitchCase="'messages'">
+        <h1>Messages</h1>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../assets/visiteur.png"
+                  alt=""
+                  style="width: 45px; height: 45px; cursor: pointer;"
+                  class="rounded-circle"
+                />
+                <div class="ms-3" style="overflow-x: hidden;">
+                  <p class="fw-bold mb-1">John Doe</p>
+                  <p class="text-muted mb-0 text-truncate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus reiciendis alias
+                    asperiores molestiae veniam
+                    nihil dolore quaerat libero voluptatibus, officia, ut ea deserunt itaque debitis assumenda, aliquid
+                    rerum officiis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../assets/visiteur.png"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Alex Ray</p>
+                  <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../../assets/visiteur.png"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Kate Hunington</p>
+                  <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" *ngSwitchCase="'message'">
+        <h3>Message</h3>
+        <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus reiciendis alias
+        asperiores molestiae veniam
+        nihil dolore quaerat libero voluptatibus, officia, ut ea deserunt itaque debitis assumenda, aliquid
+        rerum officiis</p>
+      </div>
+</div>
