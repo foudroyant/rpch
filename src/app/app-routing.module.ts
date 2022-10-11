@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ErrorComponent } from './error/error.component';
 import { ConnexionGuard } from './guards/connexion.guard';
 import { HomeComponent } from './home/home.component';
+import { InfosComponent } from './infos/infos.component';
 import { NewComponent } from './new/new.component';
 import { NewsComponent } from './news/news.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"contact", component:ContactComponent},
   {path:"admin", component:AdminComponent, canActivate:[ConnexionGuard]},
   {path:"connexion", component:ConnexionComponent},
+  {path:"news", component:InfosComponent},
   //{path:"news", component:NewsComponent},
   //{path:"new/:id", component:NewComponent},
   {path:"**", component:ErrorComponent}
